@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript_project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        function calculate() {
+            var p=0;
+            var n=0;
+            var r=0;
+            var si=0;
+            p=parseInt(document.getElementById("Principle").value);
+           // console.log(p);
+            n=parseInt(document.getElementById("years").value);
+            r=parseInt(document.getElementById("rate").value);
+            si=(p*n*r)/100;
+           // document.write(si);
+            document.getElementById("result").innerHTML=si;
+            
+        }
+    </script>
+
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <h1>Simple interest Calculator</h1>
+
+
+           </div>
+
+       </div>
+       <div class="row">
+           <div class="col-md-12">
+               <form>
+                   <div class="form-group">
+                       <label for="form-group">Principle</label>
+                       <input type="text" class="form-control" id="Principle">
+
+                   </div>
+                   <div class="form-group">
+                        <label for="form-group">years</label>
+                        <input type="text" class="form-control" id="years">
+ 
+                    </div>
+                    <div class="form-group">
+                            <label for="form-group">Rate of interest</label>
+                            <input type="text" class="form-control" id="rate">
+     
+                    </div>
+                      <button class="btn btn-primary" type="button" onclick="calculate()">Calculate</button>
+               </form>
+
+           </div>
+
+       </div>
+       <div class="row">
+           <div class="col-md-12">
+               <h1 id="result">RS</h1>
+
+           </div>
+
+       </div>
+
+
+   </div>
+    
+</body>
+</html>
